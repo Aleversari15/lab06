@@ -9,11 +9,14 @@ import it.unibo.generics.graph.api.Graph;
 
 public class GraphImpl<N> implements Graph<N> {
     private final Map<N, Set<N>> edges = new LinkedHashMap<>();
-    private final FringeAccumulationStrategy<Step<N>> strategy;
 
+    public GraphImpl(){
+
+    } 
+    
     @Override
-    public void addNode(N node) {
-        // TODO Auto-generated method stub
+    public void addNode(final N node) {
+        this.edges.put(node, null);
         
     }
 
